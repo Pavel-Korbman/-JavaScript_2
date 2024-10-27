@@ -1,3 +1,10 @@
-h1{
+.titles {
+    color: blue;
+}
+.title {
     color: brown;
+}
+
+.text {
+    color: green;
 }
