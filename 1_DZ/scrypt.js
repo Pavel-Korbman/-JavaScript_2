@@ -1,89 +1,18 @@
-// Присвоение переменной значений из тэгов с querySelector, querySelectorAll
+// 1. Найдите элемент по id, используя getElementById, элемент с id равным "super_link" и выведите этот элемент в консоль.
 
-// const heading = document.querySelector('.title');
-// const text = document.querySelectorAll('.text');
-// // for (const element of text) {
-// //     console.log(element);
-// // }
-// text.forEach(element => {
-//     console.log(element);
-// });
-// //console.log(heading);
-// //console.log(text);
+const superLink = document.querySelector('#super_link');
+console.log(superLink);
 
-// Присвоение переменной значений из тэгов с getElementById, getElementsByClassName, getElementsByTagName
+// 2. Внутри всех элементов на странице, которые имеют класс card-link, поменяйте текст внутри элемента на "ссылка".
 
-// const heading_1 = document.getElementById('subTitle');
-// const heading_2 = document.querySelector('#subTitle');
-// const list_1 = document.getElementsByClassName('list');
-// const list_QS = document.querySelectorAll('.list');
-// const list_TN = document.getElementsByTagName('li');
-// // console.log(heading_1);
-// // console.log(heading_2);
-// console.log(list_1);
-// console.log(list_QS);
-// console.log(list_TN);
+const cardLink = document.querySelectorAll('.card-link');
+cardLink.forEach(element => {
+    element.textContent = 'ссылка';
+});
 
-// heading_1.textContent = 'Заголовок сайта';
+// 3. Найдите все элементы на странице с классом card-link, которые лежат в элементе с классом card-body, и выведите полученную коллекцию в консоль.
 
-// Создание элементов createElement
+const linkBodyList = document.querySelectorAll('.card-body .card-link');
+console.log(linkBodyList);
 
-// Добавление элементов в HTML
-
-const titlesElements = document.querySelector('.titles');
-
-const newElement = document.createElement('h3');
-newElement.textContent = 'Новый подзаголовок';
-
-titlesElements.appendChild(newElement);
-
-// Добавление текста к элементу
-
-// const newText = document.createTextNode(' (Дополнительный текст подзаголовка)');
-// newElement.appendChild(newText);
-
-newElement.appendChild(document.createTextNode(' (Дополнительный текст подзаголовка)'));
-
-// Удаление элемента
-
-const oldHeading = document.querySelector('#subTitle');
-oldHeading.remove();
-
-// Клонирование элемента
-
-// Node.cloneNode(); //- без дочерних узлов
-// Node.cloneNode(true); //- c дочерними узлами
-
-// Замена элемента
-
-// parentNode.replaceChild(newChild, oldChild);
-
-// const divElement = document.createElement('div'); 
-// const paragraphElement = document.createElement('p'); 
-// divElement.appendChild(paragraphElement);
-
-// const spanElement = document.createElement('span'); 
-// const strongElement = document.createElement('strong'); 
-// paragraphElement.replaceWith(spanElement, strongElement);
-
-
-// Привязка к клику
-
-const buttonElement = document.querySelector('.btn');
-const textCont = document.querySelector('.content');
-const photoEl = document.querySelector('.product__img');
-
-const textEl = document.createElement('p');
-textEl.textContent = ' Тут любой текст и его много';
-
-photoEl.onclick = function() {
-    photoEl.src = 'img/2.jpg';
-}
-
-buttonElement.onclick = function() {    
-    buttonElement.textContent = 'Товар в корзине';
-    textCont.appendChild(textEl);    
-}
-
-
-
+// 4. Найдите первый попавшийся элемент на странице, у которого есть атрибут data-number со значением 50, и выведите его в консоль.
