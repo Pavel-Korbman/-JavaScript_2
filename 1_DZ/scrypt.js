@@ -16,3 +16,26 @@ const linkBodyList = document.querySelectorAll('.card-body .card-link');
 console.log(linkBodyList);
 
 // 4. Найдите первый попавшийся элемент на странице, у которого есть атрибут data-number со значением 50, и выведите его в консоль.
+
+const dataNum50 = document.querySelector('[data-number="50"]');
+console.log(dataNum50);
+
+// 5. Выведите содержимое тега title в консоль.
+
+console.log(document.querySelector('title').textContent);
+
+// 6. Получить элемент с классом "card-title" и вывести его родительский узел в консоль
+
+console.log(document.querySelector('.card-title').parentNode);
+
+// 7. Создайте тег <p>, запишите внутри него текст "Привет" и добавьте созданный тег в начало элемента, который имеет класс card.
+
+const hiTag = document.createElement('p');
+hiTag.textContent = 'Привет';
+const cardEl = document.querySelector(".card");
+cardEl.insertBefore(hiTag, cardEl.firstChild);
+
+// 8. Удалите тег h6 на странице.
+
+const h6El = document.querySelector('h6');
+(h6El) ? h6El.remove() : console.log("Тэг не найден");
