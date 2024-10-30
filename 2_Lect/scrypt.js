@@ -8,8 +8,6 @@ divElement.appendChild(paragraphElement);
 paragraphElement.textContent = 'Текст параграфа';
 body.insertBefore(divElement, body.firstChild);
 
-// paragraphElement.className += 'paragraph';
-paragraphElement.setAttribute('class', 'paragraph');
 
 // Добавляем инлайн-стили
 
@@ -30,3 +28,24 @@ paragraphElement.setAttribute('class', 'paragraph');
     text-align: center;
 }
 </style> */
+
+// Добавляем класс к тегу параграф
+
+// paragraphElement.className += 'paragraph';
+paragraphElement.setAttribute('class', 'paragraph');
+
+// Ещё пример
+
+const content = document.querySelector('.content');
+const titleEl = document.createElement('h1');
+titleEl.textContent = 'Заголовок';
+titleEl.setAttribute('class', 'heading');
+// content.insertBefore(titleEl, content.firstChild);
+content.appendChild(titleEl);
+
+const imgEl = document.createElement('img');
+imgEl.setAttribute('class', 'img1');
+imgEl.src = 'img/2.jpg';
+imgEl.setAttribute('alt', 'фото-1');
+imgEl.style.width = '50vw';
+content.appendChild(imgEl);
