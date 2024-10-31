@@ -126,5 +126,5 @@ console.log(maxTimeFromGroups); // 160
 
 
 
-// Работа с коллекциями
+
 
