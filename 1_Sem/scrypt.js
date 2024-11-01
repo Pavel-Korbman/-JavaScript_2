@@ -1,89 +1,38 @@
-// Присвоение переменной значений из тэгов с querySelector, querySelectorAll
+/*Дан тег <div class="content"></div> 
+Создайте новый элемент p
+Добавьте в него текст “Новый текстовый элемент”
+Добавьте созданный элемент внутри <div class="content"></div>
+Удалите добавленный узел */
 
-// const heading = document.querySelector('.title');
-// const text = document.querySelectorAll('.text');
-// // for (const element of text) {
-// //     console.log(element);
-// // }
-// text.forEach(element => {
-//     console.log(element);
-// });
-// //console.log(heading);
-// //console.log(text);
+const contentEl = document.querySelector('.content');
+// const pEl = document.createElement('p');
+// pEl.textContent = 'Новый текстовый элемент';
+// contentEl.appendChild(pEl);
+// pEl.remove();
 
-// Присвоение переменной значений из тэгов с getElementById, getElementsByClassName, getElementsByTagName
+/* Создать элемент button, добавить в блок <div class="content"></div>
+При клике на который в консоль выводится сколько раз пользователь нажал на данную кнопку */
 
-// const heading_1 = document.getElementById('subTitle');
-// const heading_2 = document.querySelector('#subTitle');
-// const list_1 = document.getElementsByClassName('list');
-// const list_QS = document.querySelectorAll('.list');
-// const list_TN = document.getElementsByTagName('li');
-// // console.log(heading_1);
-// // console.log(heading_2);
-// console.log(list_1);
-// console.log(list_QS);
-// console.log(list_TN);
-
-// heading_1.textContent = 'Заголовок сайта';
-
-// Создание элементов createElement
-
-// Добавление элементов в HTML
-
-const titlesElements = document.querySelector('.titles');
-
-const newElement = document.createElement('h3');
-newElement.textContent = 'Новый подзаголовок';
-
-titlesElements.appendChild(newElement);
-
-// Добавление текста к элементу
-
-// const newText = document.createTextNode(' (Дополнительный текст подзаголовка)');
-// newElement.appendChild(newText);
-
-newElement.appendChild(document.createTextNode(' (Дополнительный текст подзаголовка)'));
-
-// Удаление элемента
-
-const oldHeading = document.querySelector('#subTitle');
-oldHeading.remove();
-
-// Клонирование элемента
-
-// Node.cloneNode(); //- без дочерних узлов
-// Node.cloneNode(true); //- c дочерними узлами
-
-// Замена элемента
-
-// parentNode.replaceChild(newChild, oldChild);
-
-// const divElement = document.createElement('div'); 
-// const paragraphElement = document.createElement('p'); 
-// divElement.appendChild(paragraphElement);
-
-// const spanElement = document.createElement('span'); 
-// const strongElement = document.createElement('strong'); 
-// paragraphElement.replaceWith(spanElement, strongElement);
-
-
-// Привязка к клику
-
-const buttonElement = document.querySelector('.btn');
-const textCont = document.querySelector('.content');
-const photoEl = document.querySelector('.product__img');
-
-const textEl = document.createElement('p');
-textEl.textContent = ' Тут любой текст и его много';
-
-photoEl.onclick = function() {
-    photoEl.src = 'img/2.jpg';
+const buttonEl = document.createElement('button');
+buttonEl.textContent = 'счётчик кликов';
+contentEl.appendChild(buttonEl);
+let i = 1;
+function clicksCount() {
+console.log('Кликов: ' + i++);    
 }
 
-buttonElement.onclick = function() {    
-    buttonElement.textContent = 'Товар в корзине';
-    textCont.appendChild(textEl);    
-}
+// buttonEl.onclick = clicksCount;
+// buttonEl.addEventListener('click', clickCount);
+buttonEl.addEventListener('click', function(){console.log('Кликов: ' + i++);});
 
+/*Дан тег <div class="content"></div> 
+Создайте с помощью javascript новый элемент button
+Добавьте текст для кнопки “Отправить”
+При клике на данную кнопку необходимо чтобы текст поменялся на “Текст отправлен”
+*/
 
+const sendEl = document.createElement('button');
+sendEl.textContent = 'Отправить';
+contentEl.appendChild(sendEl);
+sendEl.onclick = function (){sendEl.textContent = 'Текст отправлен';}
 
