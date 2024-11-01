@@ -1,38 +1,22 @@
-/*Дан тег <div class="content"></div> 
-Создайте новый элемент p
-Добавьте в него текст “Новый текстовый элемент”
-Добавьте созданный элемент внутри <div class="content"></div>
-Удалите добавленный узел */
+// Дан блок <div class="block"></div>, 
+// внутри него необходимо создать элемент div с классом item, 
+// разместить текст “Элемент внутри” и задать стили:
 
-const contentEl = document.querySelector('.content');
-// const pEl = document.createElement('p');
-// pEl.textContent = 'Новый текстовый элемент';
-// contentEl.appendChild(pEl);
-// pEl.remove();
+// Цвет текста синий
+// Рамка сплошная черная
+// Цвет фона #f8f8f8
+// Внутренний отступ 16px
+// Добавить данному блоку класс item_1 (использовать setAttribute)
 
-/* Создать элемент button, добавить в блок <div class="content"></div>
-При клике на который в консоль выводится сколько раз пользователь нажал на данную кнопку */
+const blockEl = document.querySelector('.block');
+const itemEl = document.createElement('div');
+itemEl.className = 'item';
+blockEl.appendChild(itemEl);
+itemEl.textContent = 'Элемент внутри';
+itemEl.style.color = 'blue';
+itemEl.style.backgroundColor = '#f8f8f8';
+itemEl.style.border = 'solid 1px';
+itemEl.style.borderColor = 'black';
+itemEl.style.padding = '16px';
 
-const buttonEl = document.createElement('button');
-buttonEl.textContent = 'счётчик кликов';
-contentEl.appendChild(buttonEl);
-let i = 1;
-function clicksCount() {
-console.log('Кликов: ' + i++);    
-}
-
-// buttonEl.onclick = clicksCount;
-// buttonEl.addEventListener('click', clickCount);
-buttonEl.addEventListener('click', function(){console.log('Кликов: ' + i++);});
-
-/*Дан тег <div class="content"></div> 
-Создайте с помощью javascript новый элемент button
-Добавьте текст для кнопки “Отправить”
-При клике на данную кнопку необходимо чтобы текст поменялся на “Текст отправлен”
-*/
-
-const sendEl = document.createElement('button');
-sendEl.textContent = 'Отправить';
-contentEl.appendChild(sendEl);
-sendEl.onclick = function (){sendEl.textContent = 'Текст отправлен';}
-
+itemEl.setAttribute('class', 'item item_1'); 
