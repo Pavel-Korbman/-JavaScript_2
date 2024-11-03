@@ -30,7 +30,7 @@ ulElement.addEventListener('click', (event) => {
 });
 
 const liElements = document.querySelectorAll('ul li'); liElements.forEach((li, index) => {
-    if (index % 2 === 1) {
-        li.style.backgroundColor = 'lightgrey';
+    if (index % 2 !== 0) {
+        li.style.backgroundColor = 'lightblue';
     }
 });
