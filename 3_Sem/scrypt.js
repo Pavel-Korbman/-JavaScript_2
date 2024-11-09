@@ -52,3 +52,18 @@ buttonEl4.addEventListener('click', function (e) {
         e.target.textContent = 'Создать заголовок'
     }
 });
+
+const buttonEl5 = document.querySelector('.button5');
+
+buttonEl5.addEventListener('mouseover', function (e) {
+    console.log('Вы навели на данную кнопку');
+});
+buttonEl5.addEventListener('mouseout', function (e) {
+    console.log('Наведения на кнопку больше нет');
+});
+
+// Создать в html список состоящий из 3-х произвольных элементов li
+// Нужно создать кнопку которая будет добавлять элементы списка с текстом “новый элемент списка”
+// Создать кнопку, которая будет удалять первый элемент из созданного списка
+// Создать кнопку, при клике на которую ей добавляется класс “click”
+
