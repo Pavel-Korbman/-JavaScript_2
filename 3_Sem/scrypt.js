@@ -40,14 +40,15 @@ buttonEl3.addEventListener('click', function (e) {
 // Создать третью кнопку, при наведении на которую в консоль будет выводиться текст “вы навели на данную кнопку” , как только вы убираем курсор мыши с кнопки, в консоли должен появиться текст “Наведения на кнопку больше нет”
 
 const buttonEl4 = document.querySelector('.button4');
+const title = document.createElement('h1');
+title.className = 'title';
+buttonEl4.parentNode.insertBefore(title, buttonEl4.nextSibling);
 buttonEl4.addEventListener('click', function (e) {
-    const title = document.createElement('h1');
-    buttonEl4.append(title);
     if (e.target.textContent === 'Создать заголовок') {
         title.textContent = 'Новый заголовок';
-        e.target.textContent = 'Удалить заголовок';
-    } else {
-        title.remove;
         e.target.textContent = 'Удалить заголовок'
+    } else {
+        title.textContent = '';
+        e.target.textContent = 'Создать заголовок'
     }
 });
