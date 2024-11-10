@@ -67,3 +67,34 @@ buttonEl5.addEventListener('mouseout', function (e) {
 // Создать кнопку, которая будет удалять первый элемент из созданного списка
 // Создать кнопку, при клике на которую ей добавляется класс “click”
 
+const buttonEl6 = document.querySelector('.button6');
+const liElFirst = document.querySelector('.liEl');
+buttonEl6.addEventListener('click', function (e) {
+    const liEl = document.createElement('li');
+    liEl.textContent = 'Новый элемент списка';
+    liElFirst.parentNode.insertBefore(liEl, liElFirst);
+});
+
+const buttonEl7 = document.querySelector('.button7');
+buttonEl7.addEventListener('click', function (e) {  
+    liElFirst.parentNode.firstChild.remove();
+});
+
+const buttonEl8 = document.querySelector('.button8');
+buttonEl8.addEventListener('click', function (e) {  
+    buttonEl8.classList.add('click');
+});
+
+// Дан тег <div class="content"></div> 
+// Создайте с помощью javascript новый элемент button
+// Добавьте текст для кнопки “Отправить”
+// При клике на данную кнопку необходимо чтобы текст поменялся на “Текст отправлен”
+
+const content = document.querySelector('.content');
+const buttonEl9 = document.createElement('button');
+buttonEl9.textContent = 'Отправить';
+content.insertAdjacentElement("afterbegin", buttonEl9);
+
+buttonEl9.addEventListener('click', function (e) {  
+    buttonEl9.textContent = 'Текст отправлен';
+});
