@@ -93,7 +93,8 @@ buttonEl8.addEventListener('click', function (e) {
 const content = document.querySelector('.content');
 const buttonEl9 = document.createElement('button');
 buttonEl9.textContent = 'Отправить';
-content.insertAdjacentElement("afterbegin", buttonEl9);
+// content.insertAdjacentElement("afterbegin", buttonEl9);
+content.appendChild(buttonEl9);
 
 buttonEl9.addEventListener('click', function (e) {  
     buttonEl9.textContent = 'Текст отправлен';
