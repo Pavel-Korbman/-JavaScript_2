@@ -4,15 +4,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>События продолжение</title>    
+    <title>События продолжение</title>
 </head>
 
 <body>
- 
+    <form class="form">
+        <label><input type="radio" name="propagation-control" value="stopPropagation">Stop propagation</label>
+        <label><input type="radio" name="propagation-control" value="stopImmediatePropagation">Stop Immediate
+            propagation</label>
+    </form>
 
-    <button class="button">Кнопка</button>
-    
-    
+    <ul class="menu">
+        <li>Первый</li>
+        <li>Второй</li>
+        <li>Третий</li>
+    </ul>
+
+    <!-- <form name="myForm">
+        <input id="checkbox" type="checkbox" class="check">
+        <label for="checkbox">
+            Согласен с условиями
+        </label>
+    </form> -->
+
+    <form action="#" name="myForm" class="newForm">
+        <h1>Форма</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque ratione quidem earum itaque sunt dolores cum
+            ipsa soluta et hic iste laborum exercitationem ad delectus inventore reiciendis, aliquid mollitia. Et!</p>
+
+        <input id="checkbox" type="checkbox" class="check">
+        <label for="checkbox">Согласен с условиями</label>
+        <p></p>
+        <div class="error"></div>
+        <p></p>       
+        <button type="submit" class="submit">Отправить </button>
+    </form>
+
+
     <script src="scrypt.js"></script>
 </body>
 
