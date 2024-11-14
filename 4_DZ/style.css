@@ -1,0 +1,27 @@
+.error {
+    border: 2px solid red;
+    outline: none;
+    /* Убираем стандартное выделение при фокусе */
+}
+
+/* Анимация для появления */
+.animate_animated {
+    animation-duration: 1s;
+    /* Продолжительность анимации */
+    animation-fill-mode: both;
+    /* Держать финальное состояние анимации */
+}
+
+.animate_fadeInLeftBig {
+    @keyframes fadeInLeftBig {
+        0% {
+            opacity: 0;
+            transform: translateX(-1000px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    animation-name: fadeInLeftBig;
+}
