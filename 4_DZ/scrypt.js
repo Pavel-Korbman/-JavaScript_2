@@ -14,11 +14,14 @@
 // ■ Если поле пустое, подсветите его (добавьте класс error). 
 // ■ Если поле заполнено, уберите подсветку (удалите класс error).
 
+// 1
 const inText = document.querySelector('#from');
 const outText = document.querySelector('span');
 inText.addEventListener('input', function () {
     outText.textContent = inText.value;
 });
+
+// 2
 
 // const messageBtn = document.querySelector('.messageBtn');
 // const messageBlock = document.querySelector('.message');
@@ -31,6 +34,9 @@ messageBtn.addEventListener('click', () => {
     message.classList.add('animate_animated', 'animate_fadeInLeftBig');
     message.style.visibility = 'visible';
 });
+
+// 3
+
 const form = document.querySelector('form');
 const inputEls = document.querySelectorAll('.form-control');
 let err = false;
