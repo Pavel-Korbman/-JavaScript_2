@@ -3,7 +3,7 @@ body {
 }
 
 img {
-    height: 180px;
+    width: 300px;
     margin-top: 40px;
 }
 
@@ -14,4 +14,5 @@ p {
 .product_block {
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
 }
