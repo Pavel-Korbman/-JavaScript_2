@@ -39,12 +39,11 @@ const productData = [
     }
 ];
 
-// const element = productData[i];
 
 
 const productBlock = document.querySelector('.product_block');
 
-for (let i = 0; i < productData.length; i++) {
+productData.forEach(productData => {
 
     const productEl = document.createElement('div');
     productEl.classList.add('product');
@@ -54,7 +53,8 @@ for (let i = 0; i < productData.length; i++) {
     productImg.classList.add('product_img');
     productImg.setAttribute('alt', 'photo');
     productEl.appendChild(productImg);
-    productImg.setAttribute('src', productData[i].img);
+    //productImg.setAttribute('src', productData.img);
+    productImg.src = productData.img;
 
     const productContent = document.createElement('div');
     productContent.classList.add('product_content');
@@ -62,14 +62,15 @@ for (let i = 0; i < productData.length; i++) {
 
     const productName = document.createElement('a');
     productName.classList.add('product_name');
-    productName.setAttribute('href', 'product.html');
+    //productName.setAttribute('href', 'product.html');
+    productName.href = 'product.html';
     productContent.appendChild(productName);
-    productName.textContent = productData[i].name;
+    productName.textContent = productData.name;
 
     const productText = document.createElement('p');
     productText.classList.add('product_text');
     productContent.appendChild(productText);
-    productText.textContent = productData[i].text;
+    productText.textContent = productData.text;
 
     const productPriseBlock = document.createElement('p');
     productPriseBlock.classList.add('product_prise_block');
@@ -83,14 +84,16 @@ for (let i = 0; i < productData.length; i++) {
     const productPrise = document.createElement('span');
     productPrise.classList.add('product_prise');
     productPriseBlock.appendChild(productPrise);
-    productPrise.textContent = productData[i].prise;
+    productPrise.textContent = productData.prise;
 
     const priseCurrency = document.createElement('span');
     priseCurrency.classList.add('prise_currency');
     productPriseBlock.appendChild(priseCurrency);
     priseCurrency.textContent = 'руб';
 
-}
+});
+
+const productDataJson = JSON.parse(data); // {1: {…}, 2: {…}, 3: {…}, 4: {…}, 5: {…}, 6: {…}}
 
 
 
