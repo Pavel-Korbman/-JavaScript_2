@@ -8,7 +8,7 @@ data.forEach(e => {
 
     const aEl = document.createElement('a');
     item.appendChild(aEl);
-    aEl.href = '#';
+    aEl.href = 'card/card.html';
 
     const itemPhoto = document.createElement('div');
     aEl.appendChild(itemPhoto);
