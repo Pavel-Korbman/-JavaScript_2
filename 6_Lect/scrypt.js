@@ -90,11 +90,11 @@ audioEl.addEventListener('pause', function () {
 
 // Иногда полезно знать, какая именно часть аудио или видео была загружена или воспроизводится без задержки: например, для отображения в буферном индикаторе загрузки медиапроигрывателя. В этом разделе мы рассмотрим, как создать буфер-индикатор или панель поиска с помощью интерфейса TimeRanges и других методов медиа API
 
-// const title = document.querySelector('.title');
-// const newAudioEl = document.createElement('audio');
-// newAudioEl.src = 'img/Korol_i_SHut_Rom.mp3';
-// newAudioEl.controls = true;
-// title.parentNode.insertBefore(newAudioEl, title.nextSibling);
+const title = document.querySelector('.title');
+const newAudioEl = document.createElement('audio');
+newAudioEl.src = 'img/Korol_i_SHut_Rom.mp3';
+newAudioEl.controls = true;
+title.parentNode.insertBefore(newAudioEl, title.nextSibling);
 
 // const audio = document.querySelector('audio');
 //const buffered = audio.buffered; // хранит ссылку на объект с данными о частях буферизованных участков медиафайла: один или более — сколько успело буферизоваться.
@@ -106,17 +106,17 @@ audioEl.addEventListener('pause', function () {
 
 // ИНДИКАТОР БУФЕРИЗАЦИИ
 
-//const audio =document.querySelector('audio') 
-const { buffered, duration } = audioEl;
+const audio =document.querySelector('audio') 
+const { buffered, duration } = audio;
 const canvas = document.querySelector('canvas');
 const context = canvas.getContext('2d');
 context.fillStyle = 'lightgray';
 context.fillRect(0, 0, canvas.width, canvas.height); context.fillStyle = 'red';
 context.strokeStyle = 'white';
-const coef = canvas.width / duration// Длина однойсекунды в пикселях 
+const coef = canvas.width / duration// Длина одной секунды в пикселях 
 
 // отображение TimeRanges 
-audioEl.addEventListener('seeked', () => {
+audio.addEventListener('seeked', () => {
     for (i = 0; i < buffered.length; i++) {
         const startX = buffered.start(i) * coef;
         const endX = buffered.end(i) * coef;
@@ -131,11 +131,11 @@ audioEl.addEventListener('seeked', () => {
 // Свойство played содержит указатель на объект TimeRanges временных интервалов медиаресурса, которые браузер воспроизвёл полностью. Если суммировать все интервалы played, то получим долю прослушанного аудио, что может быть полезно для сбора метрик, например:
 
 // const audioEl = document.querySelector('audio')
-const { played } = audioEl; // объект TimeRanges 
+const { played } = audio; // объект TimeRanges 
 const handlePlayed = () => {
     let totalPlayedSeconds = 0;
     for (i = 0; played.length; i++) { totalPlayedSeconds += played.end(i) - played.start(i); }
 
     console.log(totalPlayedSeconds);
 }
-audioEl.addEventListener('pause', handlePlayed, false); audioEl.addEventListener('ended', handlePlayed, false);
+audio.addEventListener('pause', handlePlayed, false); audio.addEventListener('ended', handlePlayed, false);
