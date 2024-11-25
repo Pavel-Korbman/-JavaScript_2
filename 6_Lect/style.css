@@ -1,11 +1,22 @@
 body {
-    margin-left: 40px;
+    margin-left: 100px;
 }
 
 img {
-    width: 300px;    
+    height: 140px;    
 }
 
 p {
     width: 300px;
+}
+
+.pleer{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.pleer-1{
+    /* margin-top: 100px; */
 }
