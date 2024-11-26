@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.center {
+    padding-left: calc(50vw - 570px);
+    padding-right: calc(50vw - 570px);
+}
+
+/* li {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    line-height: 150%;
+} */
+
+.fix {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header {
+    height: 75px;
+    background-color: #222222;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.header__logo {
+    display: flex;
+    gap: 40px;
+    align-items: flex-end;
+}
+
+.header__buttons {
+    display: flex;
+    gap: 33px;
+    align-items: center;
+}
+
+
+.burger__button {
+    height: 75px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.burger__button:hover path {
+    fill: #f16d7f;
+}
+
+.burger__button:hover nav {
+    display: block;
+}
+
+.burger__menu {
+    width: 232px;
+    height: 634px;
+    background-color: #fff;
+    box-shadow: 6px 4px 35px 0 rgba(0, 0, 0, 0.21);
+    position: absolute;
+    top: 76px;
+    left: -74px;
+    display: none;
+}
+
+.burger__title {
+    font-weight: 700;
+    font-size: 14px;
+    color: #000;
+    padding-left: 33px;
+    padding-top: 36px;
+}
+
+.burger__subtitle {
+    font-weight: 400;
+    font-size: 14px;
+    color: #f16d7f;
+    padding-left: 33px;
+    padding-bottom: 14px;
+    padding-top: 30px;
+}
+
+.burger__text {
+    font-weight: 400;
+    font-size: 14px;
+    color: #6f6e6e;
+    padding-left: 54px;
+}
+
+.goods {
+    margin-top: 245px;
+}
+
+.product {
+    width: 652px;
+    height: 306px;
+    margin-bottom: 40px;
+    box-shadow: 17px 19px 24px 0 rgba(0, 0, 0, 0.13);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* gap: 32px; */
+}
+
+.img {
+    width: 262px;
+    height: 306px;
+}
+
+.content {
+    padding-left: 32px;
+}
+
+h2 {
+    margin-top: 22px;
+    margin-bottom: 50px;
+    width: 262px;
+    font-weight: 400;
+    font-size: 24px;    
+    color: #222;
+}
+
+p {
+    margin-bottom: 5px;
+    font-weight: 400;
+    font-size: 22px;    
+    color: #575757;
+}
+
+.price {
+    color: #ef5b70;
+}
+
+.color {
+    color: #6f6e6e;
+}
+
+.quantity {
+    margin-left: 31px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border: solid 1px #EAEAEA;
+    font-weight: 400;
+    font-size: 18px;
+    color: #656565;
+}
+
+.close {
+    padding-top: 26px;
+    padding-left: 54px; 
+}
