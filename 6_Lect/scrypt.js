@@ -106,7 +106,7 @@ title.parentNode.insertBefore(newAudioEl, title.nextSibling);
 
 // ИНДИКАТОР БУФЕРИЗАЦИИ
 
-const audio =document.querySelector('audio') 
+const audio = document.querySelector('audio')
 const { buffered, duration } = audio;
 const canvas = document.querySelector('canvas');
 const context = canvas.getContext('2d');
@@ -139,3 +139,15 @@ const handlePlayed = () => {
     console.log(totalPlayedSeconds);
 }
 audio.addEventListener('pause', handlePlayed, false); audio.addEventListener('ended', handlePlayed, false);
+
+// MediaStream 
+// Интерфейс MediaStream представляет поток медиаданных и может использоваться в качестве источника медиасодержимого в HTMLMediaElement. 
+// Поток состоит из нескольких треков, таких как видео- и аудиотреки. Каждый трек — экземпляр MediaStreamTrack. Получить MediaStream можно либо посредством конструктора, либо вызовом MediaDevices.getUserMedia().
+
+const recorder = document.getElementById('recorder'); 
+const player = document.getElementById('player'); 
+recorder.addEventListener('change', (event) => {
+    const [file] = event.target.files;
+    const url = URL.createObjectURL(file) // Добавление элементу потока в качестве источника
+    player.src = url
+});

@@ -15,6 +15,7 @@ p {
     display: flex;
     align-items: center;
     gap: 40px;
+    flex-wrap: wrap;
 }
 
 .pleer-1{
