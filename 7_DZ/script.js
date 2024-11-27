@@ -1,4 +1,4 @@
-"use strict";
+//"use strict";
 const data = JSON.parse(dataInfo);
 const goodsEl = document.querySelector('.goods');
 let count = 0;
@@ -45,8 +45,15 @@ data.forEach(e => {
 
 const dataCard = [];
 const ulEl = document.querySelector('.list');
+
 goodsEl.addEventListener('click', function (element) {
-    dataCard.push(data[element.target.id]);
+    if (dataCard.includes(data[element.target.id])) {
+        dataCard[dataCard.indexOf(data[element.target.id])].quantity++;
+    } else {
+        dataCard.push(data[element.target.id]);
+        dataCard[dataCard.length - 1].quantity = 1;
+    }
+
     ulEl.innerHTML = "";
     let count = 0;
     dataCard.forEach(e => {
