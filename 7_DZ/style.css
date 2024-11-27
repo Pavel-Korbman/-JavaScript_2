@@ -27,14 +27,11 @@ li {
     list-style-type: none;    
 }
 
-
-
 .title__block {
     /* margin-top: 75px; */
     margin-bottom: 65px;
     background-color: #f1e4e6;
 }
-
 
 .title {
     padding-top: 104px;
@@ -80,7 +77,6 @@ p {
     margin-left: 18px;
 }
 
-
 h1 {
     font-weight: 400;
     font-size: 30px;
@@ -104,7 +100,7 @@ h3 {
 
 .goods_card {
     margin-top: 50px;
-    display: flex;
+    /* display: flex; */
 }
 
 h4 {
@@ -141,7 +137,7 @@ h4 {
 }
 
 .product_card {
-    width: 652px;
+    max-width: 652px;
     height: 306px;
     margin-bottom: 40px;
     box-shadow: 17px 19px 24px 0 rgba(0, 0, 0, 0.13);
@@ -163,7 +159,7 @@ h4 {
 h2 {
     margin-top: 22px;
     margin-bottom: 50px;
-    width: 262px;
+    max-width: 262px;
     font-weight: 400;
     font-size: 24px;    
     color: #222;
@@ -190,36 +186,13 @@ h2 {
 .close {
     margin-top: 26px;
     margin-left: 54px;
+    
 }
 
 @media (max-width: 1140px) {
     .center {
         padding-left: calc(50vw - 368px);
         padding-right: calc(50vw - 368px);
-    }
-
-    .header__logo {
-        padding-left: 15px;
-    }
-
-    .header__buttons {
-        padding-right: 15px;
-    }
-
-    .burger__menu {
-        left: -64px;
-    }
-
-    .title__block {
-        margin-bottom: 64px;
-    }
-
-    .title__foto {
-        padding-left: 92px;
-    }
-
-    .type__block {
-        gap: 20px;
     }
 
     .type__item__bgrd-1 {
@@ -269,39 +242,7 @@ h2 {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-    }
-
-    .subscribe__block {
-        display: flex;
-        height: 614px;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .subscribe__text {
-        width: 359px;
-        padding-left: 0;
-    }
-
-    .subscribe__block__content {
-        padding-top: 96px;
-    }
-
-    .forma {
-        padding-right: 0;
-    }
-
-    .form {
-        padding-bottom: 140px;
-    }
-
-    .address {
-        padding-left: 17px;
-    }
-
-    .footer__buttons {
-        padding-right: 17px;
-    }
+    }   
 
     .off {
         display: flex;
@@ -325,20 +266,7 @@ h2 {
     .center {
         padding-left: 8px;
         padding-right: 8px;
-    }
-
-    .header__logo {
-        padding-left: 94px;
-    }
-
-    .header__buttons {
-        margin-right: 15px;
-    }
-
-    .burger__menu {
-        top: 76px;
-        left: -168px;
-    }
+    }   
 
     .title__block {
         height: 363px;
@@ -387,53 +315,7 @@ h2 {
     .button__block {
         margin-top: 41px;
         margin-bottom: 85px;
-    }
-
-    .subscribe__block {
-        height: 550px;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .subscribe__block__content {
-        padding-top: 64px;
-    }
-
-    .subscribe__text {
-        width: 343px;
-    }
-
-    .form {
-        padding-bottom: 110px;
-    }
-
-    .title__forma__norm {
-        font-size: 14px;
-        width: 300px;
-    }
-
-    .form__button {
-        width: 95px;
-    }
-
-    .field {
-        width: 213px;
-    }
-
-    .footer {
-        height: 143px;
-        flex-direction: column-reverse;
-    }
-
-    .address {
-        padding-left: 0;
-        padding-bottom: 11px;
-    }
-
-    .footer__buttons {
-        padding-right: 0;
-        padding-top: 42px;
-    }
+    } 
 
     .off {
         display: none;
@@ -488,23 +370,6 @@ h2 {
     .goods {
         grid-template-columns: 320px;
         gap: 16px;
-    }
-
-    .subscribe__text {
-        width: 300px;
-    }
-
-    .forma {
-        grid-template-columns: 320px;
-    }
-
-    .field {
-        width: 157px;
-    }
-
-    .form {
-        padding-bottom: 110px;
-        padding-left: 10px;
     }
 
 }

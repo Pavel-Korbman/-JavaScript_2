@@ -1,4 +1,3 @@
-//"use strict";
 const data = JSON.parse(dataInfo);
 const goodsEl = document.querySelector('.goods');
 let count = 0;
