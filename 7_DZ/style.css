@@ -138,37 +138,6 @@ h4 {
 .promo__block {
     height: 341px;
     background-color: #222224;
-    display: grid;
-    grid-template-columns: repeat(3, 360px);
-    gap: 30px;
-    justify-content: center;
-    align-items: center;
-}
-
-.promo__block__item {
-    color: #fbfbfb;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
-}
-
-.promo__block__item:hover {
-    color: #f16d7f;
-}
-
-.promo__block__item__title {
-    padding-top: 10px;
-    font-weight: 400;
-    font-size: 19px;
-}
-
-.promo__block__item__text {
-    text-align: center;
-    width: 280px;
-    font-weight: 300;
-    font-size: 13px;
-    color: #fbfbfb;
 }
 
 .product_card {
@@ -179,8 +148,7 @@ h4 {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: flex-start;
-    /* gap: 32px; */
+    align-items: flex-start;    
 }
 
 .img_card {
@@ -200,14 +168,6 @@ h2 {
     font-size: 24px;    
     color: #222;
 }
-
-p {
-    margin-bottom: 5px;
-    font-weight: 400;
-    font-size: 22px;    
-    color: #575757;
-}
-
 
 .price {
     color: #ef5b70;

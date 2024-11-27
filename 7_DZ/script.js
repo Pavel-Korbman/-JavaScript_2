@@ -104,6 +104,7 @@ goodsEl.addEventListener('click', function (element) {
         const closeEl = document.createElement('a');
         liEl.appendChild(closeEl);
         closeEl.classList.add('close');
+        closeEl.href = '#';
 
         const closeIcon = document.createElement('img');
         closeIcon.src = 'img/close.svg';
