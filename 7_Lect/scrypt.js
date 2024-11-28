@@ -15,7 +15,7 @@ if ('geolocation' in navigator) {
 
 // Яндекс карта:
 
-/*
+
 let map;
 function initMap() {
     map = new ymaps.Map("yandexmap", {
@@ -24,7 +24,7 @@ function initMap() {
     });
 }
 ymaps.ready(initMap);
-*/
+
 
 // Получение текущего местоположения:
 // getCurrentPosition()
@@ -110,9 +110,14 @@ const handlePositionError = (error) => {
     }
 };
 
+// Демонстрация
+/*
 let watchId = navigator.geolocation.watchPosition(({ coords }) => {
     console.log('Устройство обновило местоположение', coords.latitude, coords.longitude);
 }, handlePositionError);
+*/
+
+
 
 // Работа со скроллом 
 // DOM-интерфейсы Window и Element 
