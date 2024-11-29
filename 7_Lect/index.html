@@ -9,18 +9,47 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://api-maps.yandex.ru/2.1/?apikey=9b1cc2ae-7d44-456b-a366-43b982902046&lang=ru_RU"
         type="text/javascript">
-        </script>    
+        </script>
 </head>
 
 <body>
+    <div class="map center" id="yandexmap" style="width: 500px; height: 500px"></div>
+
+    <form class="center" name="registration">
+        <p id="notice">Пожалуйста, прокрутите и прочитайте следующий текст.</p>
+        <p>
+            <textarea id="rules"> Регистрируясь на сайте, я соглашаюсь со следующими условиями: Условие 1 
+            Условие 2
+            Условие 3 
+            Условие 4
+            Условие 5 
+            Условие 6 
+            Условие 7
+            Условие 8
+            Условие 9
+            ... 
+            Условие 10                    
+            Условие 11 </textarea>
+        </p>
+        <p>
+            <input type="checkbox" id="agree" />
+            <label for="agree">Я согласен</label>
+            <input type="submit" id="nextstep" value="Далее" />
+        </p>
+    </form>
+
+    <!-- <button type="button">Нажми на меня</button> 
+<div class="big"></div> 
+<div id="box"class="box">Скрытый элемент</div>  -->
 
 
-    <div class="map" id="yandexmap" style="width: 500px; height: 500px"></div>
 
 
 
 
 
+
+    <div class="footer"></div>
     <script src="scrypt.js"></script>
 </body>
 

@@ -1,4 +1,45 @@
-.map {
+body {
+    margin: 0;
+}
+
+.center {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+/* .map {
 width: 100vw !important;
 height: 100vh !important;
+} */
+
+#notice {
+    display: inline-block;
+    margin-bottom: 12px;
+    border-radius: 5px;
+    width: 600px;
+    padding: 5px;
+    border: 2px #7FDF55 solid;
+}
+
+#rules {
+    width: 600px;
+    height: 130px;
+    padding: 5px;
+    border: #2A9F00 solid 2px;
+    border-radius: 5px;
+}
+
+.footer {
+    height: 60px;
+    background-color: gray;
+}
+
+.big {
+    background: #ccc;
+    height: 300px;
+}
+
+.box {
+    background: lightgreen;
+    height: 40px;
 }
