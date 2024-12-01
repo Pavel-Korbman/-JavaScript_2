@@ -124,6 +124,19 @@ document.addEventListener('DOMContentLoaded', (event) => { // при загру�
         this.classList.remove('over'); // Убираем класс over после перетаскивания
     }
 
+    function handleDrop(e) {
+        if (e.stopPropagation) { e.stopPropagation() }; // Останавливаем перенаправление браузера
+        return false;
+    }
+
+    function handleDragEnd(e) {
+        this.style.opacity = '1';
+        
+        items.forEach(function (item) {
+            item.classList.remove('over')
+        });
+    }
+
 
 
     let items = document.querySelectorAll('.box');
