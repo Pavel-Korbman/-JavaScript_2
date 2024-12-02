@@ -103,17 +103,22 @@ items.forEach((item) => {
 
 document.addEventListener('DOMContentLoaded', (event) => { // при загрузке страницы
 
-    let drugScrEl = 0; // переменная элемента
+    let drugScrEl = null; // переменная элемента
 
     function handleDragStart(e) { // сделаем прозрачность элемента при перетаскивании
         this.style.opacity = '0.4';
+        drugScrEl = this;
+        // console.log(drugScrEl);
+        e.dataTransfer.effectAllowed = 'move';
+        e.dataTransfer.setData = ('text/html', this.innerHtml);
     }
 
     function handleDragOver(e) {
-        if (event.preventDefault) {
-            event.preventDefault(); // остановим включение события (переход), если это ссылка
+        if (e.preventDefault) {
+            e.preventDefault(); // остановим включение события (переход), если это ссылка
         }
-        return false
+        e.dataTransfer.dropEffect = 'move'; // функционал DnD
+        return false;
     }
 
     function handleDragEnter(e) { // Пунктир элнменту над которым перетаскиваем
@@ -125,13 +130,25 @@ document.addEventListener('DOMContentLoaded', (event) => { // при загру�
     }
 
     function handleDrop(e) {
-        if (e.stopPropagation) { e.stopPropagation() }; // Останавливаем перенаправление браузера
+        if (e.stopPropagation) { // Останавливаем перенаправление браузера
+            e.stopPropagation();
+        }
+
+        if (drugScrEl !== this) {
+            const content = drugScrEl.textContent;
+                        
+            // drugScrEl.innerHtml = this.innerHtml;
+            // this.innerHtml = e.dataTransfer.getData('text/html');
+
+            drugScrEl.textContent = this.textContent; // добавляем новый html            
+            this.textContent = content;
+        }
         return false;
     }
 
     function handleDragEnd(e) {
         this.style.opacity = '1';
-        
+
         items.forEach(function (item) {
             item.classList.remove('over')
         });
@@ -142,11 +159,12 @@ document.addEventListener('DOMContentLoaded', (event) => { // при загру�
     let items = document.querySelectorAll('.box');
     items.forEach(function (item) {
         item.addEventListener('dragstart', handleDragStart);
-        item.addEventListener('dragenter', handleDragEnter);
         item.addEventListener('dragover', handleDragOver);
+        item.addEventListener('dragenter', handleDragEnter);
         item.addEventListener('dragleave', handleDragLeave);
-        item.addEventListener('drop', handleDrop);
+        item.addEventListener('drop', handleDrop)
         item.addEventListener('dragend', handleDragEnd);
+
     });
 });
 
